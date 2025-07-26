@@ -2,14 +2,15 @@
 
 A CCSDS Concatenated Framer block for GNU Radio.
 
-This block implements the standard CCSDS concatenated encoding chain:
+This block implements implements some of the CCSDS protocols defined in the TM Synchronization and Channel Coding Blue Book (checkout [CCSDS Blue Books](https://public.ccsds.org/Publications/BlueBooks.aspx)) following the encoding chain:
 - Fixed Length Framing (Up to 219 bytes)
 - CRC32 Insertion
 - Reed-Solomon encoding (RS(255,223))
 - CCSDS scrambler
 - CCSDS 32-bit syncword insertion
-- Convolutional encoding (variable rate, constraint length 7)
-
+- Convolutional encoding (1/2 rate, constraint length 7)
+- Puncturing for various rates.
+- 
 ## 🔧 Dependencies
 
 This block **requires** [gr-satellites](https://github.com/daniestevez/gr-satellites), which provides a compatible CCSDS Concatenated Deframer for use in receive (RX) chains.
