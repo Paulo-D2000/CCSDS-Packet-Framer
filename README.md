@@ -52,6 +52,29 @@ LSB-first result: False
 LSB CRC in PDU: False
 Header bytes to skip: 0
 ```
+## 🔧 INSTALLATION
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/Paulo-D2000/CCSDS-Packet-Framer.git
+   cd CCSDS-Packet-Framer
+   ```
+
+2. Register the hierarchical blocks in GNU Radio Companion (GRC)
+   - Open one of the hierarchical block files:
+       - `ccsds_framer.grc`
+       - `ccsds_framer_crc32.grc`
+   - Press Run (F6) to save the block into your user blocks directory
+
+3. Use the blocks
+   - Blocks appear under Hierarchical Blocks → CCSDS Framer
+   - Drag them into any flowgraph
+
+4. Example flowgraphs
+   - `examples/example.grc` — BPSK Modulator & Demodulator (223-byte packets)
+   - `examples/example_crc32.grc` — BPSK with CRC32 (219-byte packets)
+   - Open these examples in GRC and press Run to see the blocks in action
+
 ## 🚀 Example Usage & Flowgraphs
 
 Use this block in a GNU Radio flowgraph to generate CCSDS-compatible transmit frames.
