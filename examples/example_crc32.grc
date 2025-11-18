@@ -465,6 +465,23 @@ blocks:
     coordinate: [736, 268.0]
     rotation: 0
     state: enabled
+- name: snippet_0
+  id: snippet
+  parameters:
+    alias: ''
+    code: 'from gnuradio import gr
+
+      gr.logging().set_default_level(gr.log_levels.error)'
+    comment: ''
+    priority: '0'
+    section: init_before_blocks
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [752, 8.0]
+    rotation: 0
+    state: enabled
 - name: virtual_sink_0_0
   id: virtual_sink
   parameters:
@@ -538,4 +555,4 @@ connections:
 
 metadata:
   file_format: 1
-  grc_version: 3.10.9.2
+  grc_version: 3.10.12.0
