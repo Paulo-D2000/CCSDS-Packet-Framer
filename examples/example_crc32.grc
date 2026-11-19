@@ -275,12 +275,13 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     padding: '0'
+    rs_i: '1'
     syncword_str: '"00011010110011111111110000011101"'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [184, 148.0]
+    coordinate: [184, 140.0]
     rotation: 0
     state: enabled
 - name: channels_channel_model_0_0

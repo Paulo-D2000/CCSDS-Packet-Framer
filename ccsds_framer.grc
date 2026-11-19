@@ -169,7 +169,7 @@ blocks:
     len_tag_key: '"packet_len"'
     maxoutbuf: '0'
     minoutbuf: '0'
-    packet_len: 223 - padding
+    packet_len: 223*rs_i - padding
     type: byte
     vlen: '1'
   states:
@@ -418,6 +418,23 @@ blocks:
     coordinate: [408, 156.0]
     rotation: 0
     state: enabled
+- name: rs_i
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: RS Interleave Depth
+    short_id: ''
+    type: intx
+    value: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [776, 12.0]
+    rotation: 0
+    state: enabled
 - name: satellites_encode_rs_ccsds_0_0
   id: satellites_encode_rs_ccsds
   parameters:
@@ -425,7 +442,7 @@ blocks:
     alias: ''
     basis: 'True'
     comment: ''
-    interleave: '1'
+    interleave: rs_i
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
